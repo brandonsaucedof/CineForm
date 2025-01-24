@@ -1,0 +1,6 @@
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.Database1\bin\Debug\Proyecto1.Database1.dacpac
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.Database1\bin\Debug\Proyecto1.Database1.dll
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.Database1\bin\Debug\Proyecto1.Database1.pdb
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.Database1\obj\Debug\Proyecto1.Database1.sqlproj.AssemblyReference.cache
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.Database1\obj\Debug\Proyecto1.Database1.dll
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.Database1\obj\Debug\Proyecto1.Database1.pdb
