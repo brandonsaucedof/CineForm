@@ -1,0 +1,73 @@
+E:\enyam\Escritorio\Cinecop\Cinecop\bin\Debug\Cinecop.exe.config
+E:\enyam\Escritorio\Cinecop\Cinecop\bin\Debug\Cinecop.exe
+E:\enyam\Escritorio\Cinecop\Cinecop\bin\Debug\Cinecop.pdb
+E:\enyam\Escritorio\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.AssemblyReference.cache
+E:\enyam\Escritorio\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.SuggestedBindingRedirects.cache
+E:\enyam\Escritorio\Cinecop\Cinecop\obj\Debug\Cinecop.Properties.Resources.resources
+E:\enyam\Escritorio\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.GenerateResource.cache
+E:\enyam\Escritorio\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.CoreCompileInputs.cache
+E:\enyam\Escritorio\Cinecop\Cinecop\obj\Debug\Cinecop.exe
+E:\enyam\Escritorio\Cinecop\Cinecop\obj\Debug\Cinecop.pdb
+E:\enyam\Escritorio\Cinecop\Cinecop\obj\Debug\Cinecop.frmInicio.resources
+E:\enyam\Escritorio\Cinecop\Cinecop\obj\Debug\Cinecop.frmBase.resources
+E:\enyam\Escritorio\Cinecop\Cinecop\obj\Debug\Cinecop.frmCartelera.resources
+E:\enyam\Escritorio\Cinecop\Cinecop\obj\Debug\Cinecop.frmAsientos.resources
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\bin\Debug\Cinecop.exe.config
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\bin\Debug\Cinecop.exe
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\bin\Debug\Cinecop.pdb
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.SuggestedBindingRedirects.cache
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\obj\Debug\Cinecop.frmInicio.resources
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\obj\Debug\Cinecop.frmBase.resources
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\obj\Debug\Cinecop.frmCartelera.resources
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\obj\Debug\Cinecop.frmAsientos.resources
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\obj\Debug\Cinecop.Properties.Resources.resources
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.GenerateResource.cache
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\obj\Debug\Cinecop.exe
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\obj\Debug\Cinecop.pdb
+C:\Users\USER\Downloads\Cinecop\Cinecop\Cinecop\obj\Debug\Cinecop.frmCompra.resources
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\bin\Debug\Cinecop.exe.config
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\bin\Debug\Cinecop.exe
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\bin\Debug\Cinecop.pdb
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.AssemblyReference.cache
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.SuggestedBindingRedirects.cache
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmInicio.resources
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmBase.resources
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmCartelera.resources
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmAsientos.resources
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmCompra.resources
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.Properties.Resources.resources
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.GenerateResource.cache
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.CoreCompileInputs.cache
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.exe
+C:\Users\SCPC620\Downloads\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.pdb
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\bin\Debug\Cinecop.exe.config
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\bin\Debug\Cinecop.exe
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\bin\Debug\Cinecop.pdb
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.AssemblyReference.cache
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.SuggestedBindingRedirects.cache
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmInicio.resources
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmBase.resources
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmCartelera.resources
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmAsientos.resources
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmCompra.resources
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.Properties.Resources.resources
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.GenerateResource.cache
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.exe
+C:\Users\USER\Downloads\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.pdb
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\bin\Debug\Cinecop.exe.config
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\bin\Debug\Cinecop.exe
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\bin\Debug\Cinecop.pdb
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.AssemblyReference.cache
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmInicio.resources
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmBase.resources
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmCartelera.resources
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmAsientos.resources
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.frmCompra.resources
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.Properties.Resources.resources
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.GenerateResource.cache
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.csproj.CoreCompileInputs.cache
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.exe
+D:\backup brandy4\buckup\backup BRANDY\UNIVERSIDAD\Cinecop 0.3\Cinecop 0.3\Cinecop\Cinecop\obj\Debug\Cinecop.pdb
