@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2d35245db4b54650a7fe9af54682756f" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.AutorizacionCombustible" Width="1.5" PointX="11.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.AutorizacionSustancia" Width="1.5" PointX="11.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.BackupLog" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.Cliente" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.ClienteJuridico" Width="1.5" PointX="5.25" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.ClienteNatural" Width="1.5" PointX="5.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.Contrato" Width="1.5" PointX="5.25" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.CuentaBancaria" Width="1.5" PointX="8.25" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.Documento" Width="1.5" PointX="10.5" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.Empleado" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.EntidadFinanciera" Width="1.5" PointX="6" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.EntidadReguladora" Width="1.5" PointX="6" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.Factura" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.Moneda" Width="1.5" PointX="0.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.Pago" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.PlanPago" Width="1.5" PointX="0.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.SeguimientoTramite" Width="1.5" PointX="10.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.SustanciaControlada" Width="1.5" PointX="11.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.TipoCuenta" Width="1.5" PointX="6" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.TipoTramite" Width="1.5" PointX="6" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.Tramite" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.TramiteCombustible" Width="1.5" PointX="13.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbSistemadeInformacionIINoviembre2024Model.TramiteSustancia" Width="1.5" PointX="13.5" PointY="7.25" IsExpanded="true" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK_TramiteCombustible_AutorizacionCombustible" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK_TramiteSustancia_AutorizacionSustancia" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__Cliente__IdPlanP__05A3D694" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__ClienteJu__IdCli__7EF6D905" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__ClienteNa__IdCli__498EEC8D" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__Contrato__IdClie__681373AD" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__CuentaBan__IdCli__503BEA1C" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__Tramite__IdClien__59C55456" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__CuentaBan__IdEnt__51300E55" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK_CuentaBancaria_Moneda" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK_CuentaBancaria_TipoCuenta" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__Documento__IdTra__6DCC4D03" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__Tramite__IdEmple__5BAD9CC8" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__Tramite__IdEntid__5CA1C101" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__Pago__IdFactura__7B264821" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK_Pago_Moneda" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK_Pago_PlanPago" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__Seguimien__IdTra__6AEFE058" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__TramiteSu__IdSus__625A9A57" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__Tramite__IdTipoT__5AB9788F" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__TramiteCo__IdTra__65370702" ManuallyRouted="false" />
+        <AssociationConnector Association="dbSistemadeInformacionIINoviembre2024Model.FK__TramiteSu__IdTra__6166761E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

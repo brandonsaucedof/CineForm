@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbSistemadeInformacionIINoviembre2024ModelStoreContainer" CdmEntityContainer="dbSistemadeInformacionIINoviembre2024Entities">
+    <EntitySetMapping Name="AutorizacionCombustible">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.AutorizacionCombustible">
+        <MappingFragment StoreEntitySet="AutorizacionCombustible">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CantidadAutorizada" ColumnName="CantidadAutorizada" />
+          <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
+          <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+          <ScalarProperty Name="NumeroAutorizacion" ColumnName="NumeroAutorizacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AutorizacionSustancia">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.AutorizacionSustancia">
+        <MappingFragment StoreEntitySet="AutorizacionSustancia">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CantidadAutorizada" ColumnName="CantidadAutorizada" />
+          <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
+          <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+          <ScalarProperty Name="NumeroAutorizacion" ColumnName="NumeroAutorizacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BackupLog">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.BackupLog">
+        <MappingFragment StoreEntitySet="BackupLog">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DatabaseName" ColumnName="DatabaseName" />
+          <ScalarProperty Name="BackupDate" ColumnName="BackupDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="FechaRegistro" ColumnName="FechaRegistro" />
+          <ScalarProperty Name="Nit" ColumnName="Nit" />
+          <ScalarProperty Name="TipoCliente" ColumnName="TipoCliente" />
+          <ScalarProperty Name="IdPlanPago" ColumnName="IdPlanPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClienteJuridico">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.ClienteJuridico">
+        <MappingFragment StoreEntitySet="ClienteJuridico">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="NIT" ColumnName="NIT" />
+          <ScalarProperty Name="NroPadron" ColumnName="NroPadron" />
+          <ScalarProperty Name="RepresentanteLegal" ColumnName="RepresentanteLegal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClienteNatural">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.ClienteNatural">
+        <MappingFragment StoreEntitySet="ClienteNatural">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="DocumentoIdentidad" ColumnName="DocumentoIdentidad" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contrato">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.Contrato">
+        <MappingFragment StoreEntitySet="Contrato">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Clausula" ColumnName="Clausula" />
+          <ScalarProperty Name="Costo" ColumnName="Costo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="VolumenActividad" ColumnName="VolumenActividad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CuentaBancaria">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.CuentaBancaria">
+        <MappingFragment StoreEntitySet="CuentaBancaria">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FechaApertura" ColumnName="FechaApertura" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="IdEntidadFinanciera" ColumnName="IdEntidadFinanciera" />
+          <ScalarProperty Name="NroCuenta" ColumnName="NroCuenta" />
+          <ScalarProperty Name="IdMoneda" ColumnName="IdMoneda" />
+          <ScalarProperty Name="IdTipoCuenta" ColumnName="IdTipoCuenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documento">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.Documento">
+        <MappingFragment StoreEntitySet="Documento">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Archivo" ColumnName="Archivo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaSubida" ColumnName="FechaSubida" />
+          <ScalarProperty Name="IdTramite" ColumnName="IdTramite" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleado">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="DocumentoIdentidad" ColumnName="DocumentoIdentidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntidadFinanciera">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.EntidadFinanciera">
+        <MappingFragment StoreEntitySet="EntidadFinanciera">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="NombreEntidadFinanciera" ColumnName="NombreEntidadFinanciera" />
+          <ScalarProperty Name="NroCuenta" ColumnName="NroCuenta" />
+          <ScalarProperty Name="NroTelefono" ColumnName="NroTelefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EntidadReguladora">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.EntidadReguladora">
+        <MappingFragment StoreEntitySet="EntidadReguladora">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factura">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.Factura">
+        <MappingFragment StoreEntitySet="Factura">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Nit" ColumnName="Nit" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moneda">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.Moneda">
+        <MappingFragment StoreEntitySet="Moneda">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NombreMoneda" ColumnName="NombreMoneda" />
+          <ScalarProperty Name="PaisProcedencia" ColumnName="PaisProcedencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pago">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.Pago">
+        <MappingFragment StoreEntitySet="Pago">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="MetodoPago" ColumnName="MetodoPago" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
+          <ScalarProperty Name="IdPlanPago" ColumnName="IdPlanPago" />
+          <ScalarProperty Name="IdMoneda" ColumnName="IdMoneda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlanPago">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.PlanPago">
+        <MappingFragment StoreEntitySet="PlanPago">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SeguimientoTramite">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.SeguimientoTramite">
+        <MappingFragment StoreEntitySet="SeguimientoTramite">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IdTramite" ColumnName="IdTramite" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SustanciaControlada">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.SustanciaControlada">
+        <MappingFragment StoreEntitySet="SustanciaControlada">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoCuenta">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.TipoCuenta">
+        <MappingFragment StoreEntitySet="TipoCuenta">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="TipoCuenta1" ColumnName="TipoCuenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoTramite">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.TipoTramite">
+        <MappingFragment StoreEntitySet="TipoTramite">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Costo" ColumnName="Costo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Obligatorio" ColumnName="Obligatorio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tramite">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.Tramite">
+        <MappingFragment StoreEntitySet="Tramite">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="Id_Prioridad" ColumnName="Id_Prioridad" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="IdTipoTramite" ColumnName="IdTipoTramite" />
+          <ScalarProperty Name="IdEmpleado" ColumnName="IdEmpleado" />
+          <ScalarProperty Name="IdEntidadReguladora" ColumnName="IdEntidadReguladora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TramiteCombustible">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.TramiteCombustible">
+        <MappingFragment StoreEntitySet="TramiteCombustible">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CantidadSolicitada" ColumnName="CantidadSolicitada" />
+          <ScalarProperty Name="IdTramite" ColumnName="IdTramite" />
+          <ScalarProperty Name="Justificacion" ColumnName="Justificacion" />
+          <ScalarProperty Name="PeriodoUso" ColumnName="PeriodoUso" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="IdAutorizacionCombustible" ColumnName="IdAutorizacionCombustible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TramiteSustancia">
+      <EntityTypeMapping TypeName="dbSistemadeInformacionIINoviembre2024Model.TramiteSustancia">
+        <MappingFragment StoreEntitySet="TramiteSustancia">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CantidadSolicitada" ColumnName="CantidadSolicitada" />
+          <ScalarProperty Name="IdTramite" ColumnName="IdTramite" />
+          <ScalarProperty Name="IdSustancia" ColumnName="IdSustancia" />
+          <ScalarProperty Name="Justificacion" ColumnName="Justificacion" />
+          <ScalarProperty Name="PeriodoUso" ColumnName="PeriodoUso" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="IdAutorizacionSustancia" ColumnName="IdAutorizacionSustancia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,674 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbSistemadeInformacionIINoviembre2024Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AutorizacionCombustible">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CantidadAutorizada" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="FechaEmision" Type="DateTime" Precision="0" />
+    <Property Name="FechaVencimiento" Type="DateTime" Precision="0" />
+    <Property Name="NumeroAutorizacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TramiteCombustible" Relationship="Self.FK_TramiteCombustible_AutorizacionCombustible" FromRole="AutorizacionCombustible" ToRole="TramiteCombustible" />
+  </EntityType>
+  <EntityType Name="AutorizacionSustancia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CantidadAutorizada" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="FechaEmision" Type="DateTime" Precision="0" />
+    <Property Name="FechaVencimiento" Type="DateTime" Precision="0" />
+    <Property Name="NumeroAutorizacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TramiteSustancia" Relationship="Self.FK_TramiteSustancia_AutorizacionSustancia" FromRole="AutorizacionSustancia" ToRole="TramiteSustancia" />
+  </EntityType>
+  <EntityType Name="BackupLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DatabaseName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BackupDate" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="0" />
+    <Property Name="Nit" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TipoCliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdPlanPago" Type="Int32" />
+    <NavigationProperty Name="PlanPago" Relationship="Self.FK__Cliente__IdPlanP__05A3D694" FromRole="Cliente" ToRole="PlanPago" />
+    <NavigationProperty Name="ClienteJuridico" Relationship="Self.FK__ClienteJu__IdCli__7EF6D905" FromRole="Cliente" ToRole="ClienteJuridico" />
+    <NavigationProperty Name="ClienteNatural" Relationship="Self.FK__ClienteNa__IdCli__498EEC8D" FromRole="Cliente" ToRole="ClienteNatural" />
+    <NavigationProperty Name="Contrato" Relationship="Self.FK__Contrato__IdClie__681373AD" FromRole="Cliente" ToRole="Contrato" />
+    <NavigationProperty Name="CuentaBancaria" Relationship="Self.FK__CuentaBan__IdCli__503BEA1C" FromRole="Cliente" ToRole="CuentaBancaria" />
+    <NavigationProperty Name="Tramite" Relationship="Self.FK__Tramite__IdClien__59C55456" FromRole="Cliente" ToRole="Tramite" />
+  </EntityType>
+  <EntityType Name="ClienteJuridico">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCliente" Type="Int32" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RazonSocial" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NIT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NroPadron" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RepresentanteLegal" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK__ClienteJu__IdCli__7EF6D905" FromRole="ClienteJuridico" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="ClienteNatural">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdCliente" Type="Int32" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApellidoPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentoIdentidad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FechaNacimiento" Type="DateTime" Precision="0" />
+    <Property Name="Genero" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK__ClienteNa__IdCli__498EEC8D" FromRole="ClienteNatural" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Contrato">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Clausula" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Costo" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaFin" Type="DateTime" Precision="0" />
+    <Property Name="FechaInicio" Type="DateTime" Precision="0" />
+    <Property Name="IdCliente" Type="Int32" />
+    <Property Name="VolumenActividad" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK__Contrato__IdClie__681373AD" FromRole="Contrato" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="CuentaBancaria">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaApertura" Type="DateTime" Precision="0" />
+    <Property Name="IdCliente" Type="Int32" />
+    <Property Name="IdEntidadFinanciera" Type="Int32" />
+    <Property Name="NroCuenta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdMoneda" Type="Int32" />
+    <Property Name="IdTipoCuenta" Type="Int32" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK__CuentaBan__IdCli__503BEA1C" FromRole="CuentaBancaria" ToRole="Cliente" />
+    <NavigationProperty Name="EntidadFinanciera" Relationship="Self.FK__CuentaBan__IdEnt__51300E55" FromRole="CuentaBancaria" ToRole="EntidadFinanciera" />
+    <NavigationProperty Name="Moneda" Relationship="Self.FK_CuentaBancaria_Moneda" FromRole="CuentaBancaria" ToRole="Moneda" />
+    <NavigationProperty Name="TipoCuenta" Relationship="Self.FK_CuentaBancaria_TipoCuenta" FromRole="CuentaBancaria" ToRole="TipoCuenta" />
+  </EntityType>
+  <EntityType Name="Documento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Archivo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaSubida" Type="DateTime" Precision="0" />
+    <Property Name="IdTramite" Type="Int32" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tramite" Relationship="Self.FK__Documento__IdTra__6DCC4D03" FromRole="Documento" ToRole="Tramite" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentoIdentidad" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tramite" Relationship="Self.FK__Tramite__IdEmple__5BAD9CC8" FromRole="Empleado" ToRole="Tramite" />
+  </EntityType>
+  <EntityType Name="EntidadFinanciera">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="NombreEntidadFinanciera" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NroCuenta" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NroTelefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CuentaBancaria" Relationship="Self.FK__CuentaBan__IdEnt__51300E55" FromRole="EntidadFinanciera" ToRole="CuentaBancaria" />
+  </EntityType>
+  <EntityType Name="EntidadReguladora">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tramite" Relationship="Self.FK__Tramite__IdEntid__5CA1C101" FromRole="EntidadReguladora" ToRole="Tramite" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="Nit" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Total" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="Pago" Relationship="Self.FK__Pago__IdFactura__7B264821" FromRole="Factura" ToRole="Pago" />
+  </EntityType>
+  <EntityType Name="Moneda">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreMoneda" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PaisProcedencia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CuentaBancaria" Relationship="Self.FK_CuentaBancaria_Moneda" FromRole="Moneda" ToRole="CuentaBancaria" />
+    <NavigationProperty Name="Pago" Relationship="Self.FK_Pago_Moneda" FromRole="Moneda" ToRole="Pago" />
+  </EntityType>
+  <EntityType Name="Pago">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="MetodoPago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Monto" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="IdFactura" Type="Int32" />
+    <Property Name="IdPlanPago" Type="Int32" />
+    <Property Name="IdMoneda" Type="Int32" />
+    <NavigationProperty Name="Factura" Relationship="Self.FK__Pago__IdFactura__7B264821" FromRole="Pago" ToRole="Factura" />
+    <NavigationProperty Name="Moneda" Relationship="Self.FK_Pago_Moneda" FromRole="Pago" ToRole="Moneda" />
+    <NavigationProperty Name="PlanPago" Relationship="Self.FK_Pago_PlanPago" FromRole="Pago" ToRole="PlanPago" />
+  </EntityType>
+  <EntityType Name="PlanPago">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdPlanP__05A3D694" FromRole="PlanPago" ToRole="Cliente" />
+    <NavigationProperty Name="Pago" Relationship="Self.FK_Pago_PlanPago" FromRole="PlanPago" ToRole="Pago" />
+  </EntityType>
+  <EntityType Name="SeguimientoTramite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="IdTramite" Type="Int32" />
+    <Property Name="Observaciones" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tramite" Relationship="Self.FK__Seguimien__IdTra__6AEFE058" FromRole="SeguimientoTramite" ToRole="Tramite" />
+  </EntityType>
+  <EntityType Name="SustanciaControlada">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Categoria" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UnidadMedida" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TramiteSustancia" Relationship="Self.FK__TramiteSu__IdSus__625A9A57" FromRole="SustanciaControlada" ToRole="TramiteSustancia" />
+  </EntityType>
+  <EntityType Name="TipoCuenta">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TipoCuenta1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CuentaBancaria" Relationship="Self.FK_CuentaBancaria_TipoCuenta" FromRole="TipoCuenta" ToRole="CuentaBancaria" />
+  </EntityType>
+  <EntityType Name="TipoTramite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Costo" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Obligatorio" Type="Boolean" />
+    <NavigationProperty Name="Tramite" Relationship="Self.FK__Tramite__IdTipoT__5AB9788F" FromRole="TipoTramite" ToRole="Tramite" />
+  </EntityType>
+  <EntityType Name="Tramite">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FechaFin" Type="DateTime" Precision="0" />
+    <Property Name="FechaInicio" Type="DateTime" Precision="0" />
+    <Property Name="Id_Prioridad" Type="Int32" />
+    <Property Name="IdCliente" Type="Int32" />
+    <Property Name="IdTipoTramite" Type="Int32" />
+    <Property Name="IdEmpleado" Type="Int32" />
+    <Property Name="IdEntidadReguladora" Type="Int32" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK__Tramite__IdClien__59C55456" FromRole="Tramite" ToRole="Cliente" />
+    <NavigationProperty Name="Documento" Relationship="Self.FK__Documento__IdTra__6DCC4D03" FromRole="Tramite" ToRole="Documento" />
+    <NavigationProperty Name="Empleado" Relationship="Self.FK__Tramite__IdEmple__5BAD9CC8" FromRole="Tramite" ToRole="Empleado" />
+    <NavigationProperty Name="EntidadReguladora" Relationship="Self.FK__Tramite__IdEntid__5CA1C101" FromRole="Tramite" ToRole="EntidadReguladora" />
+    <NavigationProperty Name="SeguimientoTramite" Relationship="Self.FK__Seguimien__IdTra__6AEFE058" FromRole="Tramite" ToRole="SeguimientoTramite" />
+    <NavigationProperty Name="TipoTramite" Relationship="Self.FK__Tramite__IdTipoT__5AB9788F" FromRole="Tramite" ToRole="TipoTramite" />
+    <NavigationProperty Name="TramiteCombustible" Relationship="Self.FK__TramiteCo__IdTra__65370702" FromRole="Tramite" ToRole="TramiteCombustible" />
+    <NavigationProperty Name="TramiteSustancia" Relationship="Self.FK__TramiteSu__IdTra__6166761E" FromRole="Tramite" ToRole="TramiteSustancia" />
+  </EntityType>
+  <EntityType Name="TramiteCombustible">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CantidadSolicitada" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="IdTramite" Type="Int32" />
+    <Property Name="Justificacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PeriodoUso" Type="DateTime" Precision="0" />
+    <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdAutorizacionCombustible" Type="Int32" />
+    <NavigationProperty Name="AutorizacionCombustible" Relationship="Self.FK_TramiteCombustible_AutorizacionCombustible" FromRole="TramiteCombustible" ToRole="AutorizacionCombustible" />
+    <NavigationProperty Name="Tramite" Relationship="Self.FK__TramiteCo__IdTra__65370702" FromRole="TramiteCombustible" ToRole="Tramite" />
+  </EntityType>
+  <EntityType Name="TramiteSustancia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CantidadSolicitada" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="IdTramite" Type="Int32" />
+    <Property Name="IdSustancia" Type="Int32" />
+    <Property Name="Justificacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PeriodoUso" Type="DateTime" Precision="0" />
+    <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdAutorizacionSustancia" Type="Int32" />
+    <NavigationProperty Name="AutorizacionSustancia" Relationship="Self.FK_TramiteSustancia_AutorizacionSustancia" FromRole="TramiteSustancia" ToRole="AutorizacionSustancia" />
+    <NavigationProperty Name="SustanciaControlada" Relationship="Self.FK__TramiteSu__IdSus__625A9A57" FromRole="TramiteSustancia" ToRole="SustanciaControlada" />
+    <NavigationProperty Name="Tramite" Relationship="Self.FK__TramiteSu__IdTra__6166761E" FromRole="TramiteSustancia" ToRole="Tramite" />
+  </EntityType>
+  <Association Name="FK_TramiteCombustible_AutorizacionCombustible">
+    <End Role="AutorizacionCombustible" Type="Self.AutorizacionCombustible" Multiplicity="0..1" />
+    <End Role="TramiteCombustible" Type="Self.TramiteCombustible" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutorizacionCombustible">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TramiteCombustible">
+        <PropertyRef Name="IdAutorizacionCombustible" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TramiteSustancia_AutorizacionSustancia">
+    <End Role="AutorizacionSustancia" Type="Self.AutorizacionSustancia" Multiplicity="0..1" />
+    <End Role="TramiteSustancia" Type="Self.TramiteSustancia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AutorizacionSustancia">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TramiteSustancia">
+        <PropertyRef Name="IdAutorizacionSustancia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cliente__IdPlanP__05A3D694">
+    <End Role="PlanPago" Type="Self.PlanPago" Multiplicity="0..1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanPago">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IdPlanPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClienteJu__IdCli__7EF6D905">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="ClienteJuridico" Type="Self.ClienteJuridico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClienteJuridico">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ClienteNa__IdCli__498EEC8D">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="ClienteNatural" Type="Self.ClienteNatural" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClienteNatural">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Contrato__IdClie__681373AD">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Contrato" Type="Self.Contrato" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contrato">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBan__IdCli__503BEA1C">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="CuentaBancaria" Type="Self.CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tramite__IdClien__59C55456">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Tramite" Type="Self.Tramite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tramite">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CuentaBan__IdEnt__51300E55">
+    <End Role="EntidadFinanciera" Type="Self.EntidadFinanciera" Multiplicity="0..1" />
+    <End Role="CuentaBancaria" Type="Self.CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EntidadFinanciera">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="IdEntidadFinanciera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuentaBancaria_Moneda">
+    <End Role="Moneda" Type="Self.Moneda" Multiplicity="0..1" />
+    <End Role="CuentaBancaria" Type="Self.CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Moneda">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="IdMoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CuentaBancaria_TipoCuenta">
+    <End Role="TipoCuenta" Type="Self.TipoCuenta" Multiplicity="0..1" />
+    <End Role="CuentaBancaria" Type="Self.CuentaBancaria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoCuenta">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CuentaBancaria">
+        <PropertyRef Name="IdTipoCuenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Documento__IdTra__6DCC4D03">
+    <End Role="Tramite" Type="Self.Tramite" Multiplicity="0..1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tramite">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="IdTramite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tramite__IdEmple__5BAD9CC8">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="0..1" />
+    <End Role="Tramite" Type="Self.Tramite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tramite">
+        <PropertyRef Name="IdEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tramite__IdEntid__5CA1C101">
+    <End Role="EntidadReguladora" Type="Self.EntidadReguladora" Multiplicity="0..1" />
+    <End Role="Tramite" Type="Self.Tramite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EntidadReguladora">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tramite">
+        <PropertyRef Name="IdEntidadReguladora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pago__IdFactura__7B264821">
+    <End Role="Factura" Type="Self.Factura" Multiplicity="0..1" />
+    <End Role="Pago" Type="Self.Pago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pago">
+        <PropertyRef Name="IdFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pago_Moneda">
+    <End Role="Moneda" Type="Self.Moneda" Multiplicity="0..1" />
+    <End Role="Pago" Type="Self.Pago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Moneda">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pago">
+        <PropertyRef Name="IdMoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pago_PlanPago">
+    <End Role="PlanPago" Type="Self.PlanPago" Multiplicity="0..1" />
+    <End Role="Pago" Type="Self.Pago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlanPago">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pago">
+        <PropertyRef Name="IdPlanPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Seguimien__IdTra__6AEFE058">
+    <End Role="Tramite" Type="Self.Tramite" Multiplicity="0..1" />
+    <End Role="SeguimientoTramite" Type="Self.SeguimientoTramite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tramite">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SeguimientoTramite">
+        <PropertyRef Name="IdTramite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TramiteSu__IdSus__625A9A57">
+    <End Role="SustanciaControlada" Type="Self.SustanciaControlada" Multiplicity="0..1" />
+    <End Role="TramiteSustancia" Type="Self.TramiteSustancia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SustanciaControlada">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TramiteSustancia">
+        <PropertyRef Name="IdSustancia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tramite__IdTipoT__5AB9788F">
+    <End Role="TipoTramite" Type="Self.TipoTramite" Multiplicity="0..1" />
+    <End Role="Tramite" Type="Self.Tramite" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoTramite">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tramite">
+        <PropertyRef Name="IdTipoTramite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TramiteCo__IdTra__65370702">
+    <End Role="Tramite" Type="Self.Tramite" Multiplicity="0..1" />
+    <End Role="TramiteCombustible" Type="Self.TramiteCombustible" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tramite">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TramiteCombustible">
+        <PropertyRef Name="IdTramite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TramiteSu__IdTra__6166761E">
+    <End Role="Tramite" Type="Self.Tramite" Multiplicity="0..1" />
+    <End Role="TramiteSustancia" Type="Self.TramiteSustancia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tramite">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TramiteSustancia">
+        <PropertyRef Name="IdTramite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbSistemadeInformacionIINoviembre2024Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AutorizacionCombustible" EntityType="Self.AutorizacionCombustible" />
+    <EntitySet Name="AutorizacionSustancia" EntityType="Self.AutorizacionSustancia" />
+    <EntitySet Name="BackupLog" EntityType="Self.BackupLog" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+    <EntitySet Name="ClienteJuridico" EntityType="Self.ClienteJuridico" />
+    <EntitySet Name="ClienteNatural" EntityType="Self.ClienteNatural" />
+    <EntitySet Name="Contrato" EntityType="Self.Contrato" />
+    <EntitySet Name="CuentaBancaria" EntityType="Self.CuentaBancaria" />
+    <EntitySet Name="Documento" EntityType="Self.Documento" />
+    <EntitySet Name="Empleado" EntityType="Self.Empleado" />
+    <EntitySet Name="EntidadFinanciera" EntityType="Self.EntidadFinanciera" />
+    <EntitySet Name="EntidadReguladora" EntityType="Self.EntidadReguladora" />
+    <EntitySet Name="Factura" EntityType="Self.Factura" />
+    <EntitySet Name="Moneda" EntityType="Self.Moneda" />
+    <EntitySet Name="Pago" EntityType="Self.Pago" />
+    <EntitySet Name="PlanPago" EntityType="Self.PlanPago" />
+    <EntitySet Name="SeguimientoTramite" EntityType="Self.SeguimientoTramite" />
+    <EntitySet Name="SustanciaControlada" EntityType="Self.SustanciaControlada" />
+    <EntitySet Name="TipoCuenta" EntityType="Self.TipoCuenta" />
+    <EntitySet Name="TipoTramite" EntityType="Self.TipoTramite" />
+    <EntitySet Name="Tramite" EntityType="Self.Tramite" />
+    <EntitySet Name="TramiteCombustible" EntityType="Self.TramiteCombustible" />
+    <EntitySet Name="TramiteSustancia" EntityType="Self.TramiteSustancia" />
+    <AssociationSet Name="FK_TramiteCombustible_AutorizacionCombustible" Association="Self.FK_TramiteCombustible_AutorizacionCombustible">
+      <End Role="AutorizacionCombustible" EntitySet="AutorizacionCombustible" />
+      <End Role="TramiteCombustible" EntitySet="TramiteCombustible" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TramiteSustancia_AutorizacionSustancia" Association="Self.FK_TramiteSustancia_AutorizacionSustancia">
+      <End Role="AutorizacionSustancia" EntitySet="AutorizacionSustancia" />
+      <End Role="TramiteSustancia" EntitySet="TramiteSustancia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cliente__IdPlanP__05A3D694" Association="Self.FK__Cliente__IdPlanP__05A3D694">
+      <End Role="PlanPago" EntitySet="PlanPago" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClienteJu__IdCli__7EF6D905" Association="Self.FK__ClienteJu__IdCli__7EF6D905">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="ClienteJuridico" EntitySet="ClienteJuridico" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ClienteNa__IdCli__498EEC8D" Association="Self.FK__ClienteNa__IdCli__498EEC8D">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="ClienteNatural" EntitySet="ClienteNatural" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Contrato__IdClie__681373AD" Association="Self.FK__Contrato__IdClie__681373AD">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Contrato" EntitySet="Contrato" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBan__IdCli__503BEA1C" Association="Self.FK__CuentaBan__IdCli__503BEA1C">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tramite__IdClien__59C55456" Association="Self.FK__Tramite__IdClien__59C55456">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Tramite" EntitySet="Tramite" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CuentaBan__IdEnt__51300E55" Association="Self.FK__CuentaBan__IdEnt__51300E55">
+      <End Role="EntidadFinanciera" EntitySet="EntidadFinanciera" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuentaBancaria_Moneda" Association="Self.FK_CuentaBancaria_Moneda">
+      <End Role="Moneda" EntitySet="Moneda" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CuentaBancaria_TipoCuenta" Association="Self.FK_CuentaBancaria_TipoCuenta">
+      <End Role="TipoCuenta" EntitySet="TipoCuenta" />
+      <End Role="CuentaBancaria" EntitySet="CuentaBancaria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Documento__IdTra__6DCC4D03" Association="Self.FK__Documento__IdTra__6DCC4D03">
+      <End Role="Tramite" EntitySet="Tramite" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tramite__IdEmple__5BAD9CC8" Association="Self.FK__Tramite__IdEmple__5BAD9CC8">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Tramite" EntitySet="Tramite" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tramite__IdEntid__5CA1C101" Association="Self.FK__Tramite__IdEntid__5CA1C101">
+      <End Role="EntidadReguladora" EntitySet="EntidadReguladora" />
+      <End Role="Tramite" EntitySet="Tramite" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pago__IdFactura__7B264821" Association="Self.FK__Pago__IdFactura__7B264821">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="Pago" EntitySet="Pago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pago_Moneda" Association="Self.FK_Pago_Moneda">
+      <End Role="Moneda" EntitySet="Moneda" />
+      <End Role="Pago" EntitySet="Pago" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pago_PlanPago" Association="Self.FK_Pago_PlanPago">
+      <End Role="PlanPago" EntitySet="PlanPago" />
+      <End Role="Pago" EntitySet="Pago" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Seguimien__IdTra__6AEFE058" Association="Self.FK__Seguimien__IdTra__6AEFE058">
+      <End Role="Tramite" EntitySet="Tramite" />
+      <End Role="SeguimientoTramite" EntitySet="SeguimientoTramite" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TramiteSu__IdSus__625A9A57" Association="Self.FK__TramiteSu__IdSus__625A9A57">
+      <End Role="SustanciaControlada" EntitySet="SustanciaControlada" />
+      <End Role="TramiteSustancia" EntitySet="TramiteSustancia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tramite__IdTipoT__5AB9788F" Association="Self.FK__Tramite__IdTipoT__5AB9788F">
+      <End Role="TipoTramite" EntitySet="TipoTramite" />
+      <End Role="Tramite" EntitySet="Tramite" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TramiteCo__IdTra__65370702" Association="Self.FK__TramiteCo__IdTra__65370702">
+      <End Role="Tramite" EntitySet="Tramite" />
+      <End Role="TramiteCombustible" EntitySet="TramiteCombustible" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TramiteSu__IdTra__6166761E" Association="Self.FK__TramiteSu__IdTra__6166761E">
+      <End Role="Tramite" EntitySet="Tramite" />
+      <End Role="TramiteSustancia" EntitySet="TramiteSustancia" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

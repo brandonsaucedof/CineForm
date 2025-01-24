@@ -1,0 +1,15 @@
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\bin\Debug\Proyecto1.RN.dll.config
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\bin\Debug\Proyecto1.RN.dll
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\bin\Debug\Proyecto1.RN.pdb
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\bin\Debug\EntityFramework.dll
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\bin\Debug\EntityFramework.SqlServer.dll
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\bin\Debug\Proyecto2.Datos.dll
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\bin\Debug\Proyecto2.Datos.pdb
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\bin\Debug\Proyecto2.Datos.dll.config
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\bin\Debug\EntityFramework.xml
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\bin\Debug\EntityFramework.SqlServer.xml
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\obj\Debug\Proyecto1.RN.csproj.AssemblyReference.cache
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\obj\Debug\Proyecto1.RN.csproj.CoreCompileInputs.cache
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\obj\Debug\Proyecto.EB184602.Up2Date
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\obj\Debug\Proyecto1.RN.dll
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto1.RN\obj\Debug\Proyecto1.RN.pdb

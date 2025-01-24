@@ -1,0 +1,12 @@
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto2.Datos\bin\Debug\Proyecto2.Datos.dll.config
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto2.Datos\bin\Debug\Proyecto2.Datos.dll
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto2.Datos\bin\Debug\Proyecto2.Datos.pdb
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto2.Datos\bin\Debug\EntityFramework.dll
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto2.Datos\bin\Debug\EntityFramework.SqlServer.dll
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto2.Datos\bin\Debug\EntityFramework.xml
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto2.Datos\bin\Debug\EntityFramework.SqlServer.xml
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto2.Datos\obj\Debug\Proyecto2.Datos.csproj.AssemblyReference.cache
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto2.Datos\obj\Debug\Proyecto2.Datos.csproj.CoreCompileInputs.cache
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto2.Datos\obj\Debug\Proyecto.543E178E.Up2Date
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto2.Datos\obj\Debug\Proyecto2.Datos.dll
+D:\sistemainformacionII\Proyecto1.Presentacion\Proyecto2.Datos\obj\Debug\Proyecto2.Datos.pdb
